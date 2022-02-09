@@ -1,20 +1,20 @@
-package arrayrotation;
+package statistics;
 
 public class Main {
-
 public static void main(String[] args) {
 		
-		RotateArray r = new RotateArray();
+		KthSmallest ob = new KthSmallest(); 
 		
-		int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
-		
-		r.rotate(arr, 10);
-		
-		//printing an array
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
-	}
-
+        int arr[] = {12, 3, 57, 4, 19, 26}; 
+        
+        int left=0;//first index
+        
+        int n = arr.length;
+        
+        int right= n-1; //last index
+        int k = 3; 
+        
+        System.out.println("K'th smallest element is "+ ob.kthSmallest(arr, left, right, k)); 
+    }
 
 }
