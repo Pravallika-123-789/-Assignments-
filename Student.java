@@ -1,31 +1,36 @@
-package serialization;
+package oops.encaptulation;
 
-import java.io.Serializable;
-
-public class Student implements Serializable {
+public class Student {
+	
 	private int id;
 	private String name;
-	private transient String email;//don't serialize this value
+	private String email;
 	private String password;
-	
-	public Student(int id,String name, String email, String password)
-	{
-		this.id=id;
-		this.name=name;
-		this.email=email;
-		this.password=password;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
-	public void display()
-	{
-		System.out.println(id+" "+name+" "+email+" "+password);
-	}
-	
-	public static void main(String[] args) {
-		
-		Student s1= new Student(1, "test", "test@123.com", "test@123");
-		s1.display();
-	}
-
-
 }
+
+
