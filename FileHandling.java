@@ -18,7 +18,7 @@ public class FileHandling {
 		//Creating File
 		try
 		{
-			File f = new File("E:\\Files\\FileByCode.txt");
+			File f = new File("C:\\Users\\Lenovo\\filename.txt"); 
 			if(f.createNewFile())
 			{
 				System.out.println("File Created Successfully");
@@ -36,7 +36,7 @@ public class FileHandling {
 		//Writing in file
 		try
 		{
-			File f = new File("E:\\Files\\FileByCode.txt");
+			File f = new File("C:\\Users\\Lenovo\\filename.txt");  
 			FileWriter writer= new FileWriter(f);
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Enter the message you want to add to file: ");
@@ -66,7 +66,7 @@ public class FileHandling {
 	
 	public static void appendFile(String fileName, String str) throws IOException {
 		try {
-		   BufferedWriter out = new BufferedWriter(new FileWriter("E:\\\\Files\\\\FileByCode.txt", true));
+		   BufferedWriter out = new BufferedWriter(new FileWriter("C:\\Users\\Lenovo\\filename.txt", true));
 		   out.write(str);
 		   out.close();
 	   }
@@ -93,7 +93,7 @@ public class FileHandling {
 			
 			else if(choice == 2)
 			{
-				List<String> result= readFile("E:\\Files\\FileByCode.txt");
+				List<String> result= readFile("C:\\Users\\Lenovo\\filename.txt");  
 				Iterator<String> it= result.iterator();
 				System.out.println();
 				while(it.hasNext())
